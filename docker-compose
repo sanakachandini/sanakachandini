@@ -1,0 +1,27 @@
+version: "3.8"
+services:
+  movies:
+    image: sanakachandini/paytmmovies:latest
+     ports:
+    - "91:80"
+     deploy:
+    replicas: 3
+  train:
+    image: sanakachandini/paytmtrain:latest
+    ports:
+    - "92:80"
+    deploy:
+    replicas: 3
+  recharge:
+    image: sanakachandini/paytmrecharge:latest
+    ports:
+    - "93:80"
+   deploy:
+    replicas: 3
+  dth:
+    image: sanakachandini/paytmdth:latest
+    ports:
+    - "94:80"
+    deploy:
+    replicas: 3
+
